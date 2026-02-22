@@ -104,7 +104,213 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="成为玛恩纳的顶头上司" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="生成您自己的唯一ID" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="封面" tags="" position="50,25" size="100,100">&lt;img src=&quot;img/封面.jpg&quot;   alt=“封面” width=50%&gt;
+	<tw-storydata name="成为玛恩纳的顶头上司" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="生成您自己的唯一ID" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#story{ 
+  color:#2c3e50;
+}
+
+a {
+    color: #d0d8ee;
+    text-shadow: 0px 0px 6px #292b34;
+}
+
+/* 鼠标悬停时，边框和文字变为金色 */
+.check-button a:hover {
+  border-color: #b8860b;
+  color: #b8860b;
+  box-shadow: 0 0 5px rgba(184, 134, 11, 0.5); /* 添加淡淡的金色光晕 */
+}
+
+
+body {
+    background: #bdc3c7;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 颜色块样式 */
+.color-block {
+    position: fixed;
+    width: 1600px;
+    height: 1600px;
+    border-radius: 1100px;
+    filter: blur(20px);
+    opacity: 0.2;
+    animation: rotateColor 30s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.color-block-1 {
+    background: radial-gradient(circle, #2c3e50, #bdc3c7);
+    animation-duration: 55s;
+    top: -30%;
+    left: -30%;
+}
+
+.color-block-2 {
+    background: radial-gradient(circle, #2c3e50, #bdc3c7);
+    animation-duration: 75s;
+    bottom: -60%;
+    right: -30%;
+}
+
+.color-block-3 {
+    background: radial-gradient(circle, #2c3e50, #bdc3c7);
+    animation-duration: 85s;
+    bottom: 72%;
+    right: -22%;
+}
+
+.color-block-4 {
+    background: radial-gradient(circle, #2c3e50, #bdc3c7);
+    animation-duration: 65s;
+    bottom: -52%;
+    right: 52%;
+}
+
+@keyframes rotateColor {
+    0% {
+        transform: rotate(0deg) translateX(0%) translateY(0%);
+        opacity: 0.4;
+    }
+    25% {
+        transform: rotate(90deg) translateX(-50%) translateY(50%);
+        opacity: 0.8;
+    }
+    50% {
+        transform: rotate(180deg) translateX(50%) translateY(-50%);
+        opacity: 0.4;
+    }
+    75% {
+        transform: rotate(270deg) translateX(-50%) translateY(50%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: rotate(360deg) translateX(0%) translateY(0%);
+        opacity: 0.4;
+    }
+}
+
+
+/* 侧边栏的基本样式设置 */ 
+#ui-bar-body{
+    margin: 1.8em 0;
+}
+#ui-bar{  
+    /* 侧边栏排版，这里是居中 */  
+    text-align:center;  
+    /* 侧边栏描边，冒号后分别是粗细 样式 颜色 */  
+    border: 2px solid #f4eede;  
+    /* 侧边栏四边的内边距 */  
+    padding: 5px 5px 5px 0px;  
+    /* 侧边栏最大宽度 */  
+    max-width: 18em;  
+    /* 侧边栏外边距，水平居中 */  
+    margin: 0 auto;  
+    /* 侧边栏内字体颜色 */  
+    color:white;  
+    /* 侧边栏背景色，带有透明度 */  
+    background: linear-gradient(to right, rgba( 25, 25, 25, 0.25 )0%,rgba( 45, 45, 45, 0.25 )15%); 
+    /* 添加阴影效果，增强立体感 */  
+    box-shadow: 0 8px 15px 0 rgba( 0, 0, 0, 1);  
+    /* 应用背景模糊效果，提升视觉效果 */  
+    backdrop-filter: blur( 6px );  
+    -webkit-backdrop-filter: blur( 6px ); /* 兼容性处理，针对旧版Safari */  
+    /* 设置边框圆角 */    
+    border: 0px solid rgba( 255, 255, 255, 0.18 );  
+  font-family: "WenQuanYi Bitmap Song 14px";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}   
+  #ui-bar-tray button::before {
+   font-size: 1.2em;
+}
+/* 侧边栏收起时的样式 */  
+#ui-bar-toggle{  
+    /* 侧边栏收起时的字体颜色 */  
+    color:#3f4c6b;  
+}  
+  
+
+/* 侧边栏托盘中的按钮样式 （没作用？*/  
+#ui-bar-tray button {  
+    /* 透明背景 */  
+    background-color:rgba(255, 255, 255, 0);  
+    /* 透明边框 */  
+    border-color:rgba(255, 255, 255, 0);  
+    /* 字体颜色 */  
+    color:#3f4c6b;  
+    /* 边框圆角 */  
+    border-radius:0px;  
+}  
+
+/* 侧边栏托盘中的按钮悬停效果 */  
+#ui-bar-tray button:hover {  
+    /* 悬停时保持透明背景 */  
+    background-color:rgba(255, 255, 255, 0);  
+    /* 悬停时保持透明边框 */  
+    border-color:rgba(255, 255, 255, 0);  
+    /* 悬停时字体颜色变黑色 */  
+    color:white;  
+    /* 边框圆角不变 */  
+    border-radius:0px;  
+}  
+  
+/* 侧边栏历史记录中的项样式 */  
+#ui-bar-history [id|="history"]:disabled {  
+    /* 禁用状态的字体颜色和背景色 */  
+    color: #444;  
+    background-color: transparent;  
+    /* 隐藏禁用项 */  
+    display:none;  
+}  
+  
+#ui-bar-history [id|="history"] {  
+
+    /* 字体颜色 */  
+    color:white;  
+    /* 透明背景 */  
+    background-color: transparent;  
+}  
+  
+#ui-bar-history [id|="history"]:hover {  
+    /* 悬停时字体颜色变红 */  
+    color:#3f4c6b;  
+    /* 悬停时保持透明背景 */  
+    background-color: transparent;  
+}  
+
+#menu li a {
+    border: 0px solid transparent;
+}
+#menu li a:hover {
+    background-color: #151a27a3;
+}
+#menu ul {
+    border: 0px solid #444;
+} </style><script role="script" id="twine-user-script" type="text/twine-javascript">  // 动态插入两个颜色块，模拟颜色缓慢移动和旋转
+  function addColorBlocks() {
+    var block1 = document.createElement('div');
+    block1.className = 'color-block color-block-1';
+    
+    var block2 = document.createElement('div');
+    block2.className = 'color-block color-block-2';
+    
+        var block3 = document.createElement('div');
+    block3.className = 'color-block color-block-3';
+    
+            var block4 = document.createElement('div');
+    block4.className = 'color-block color-block-4';
+
+    document.body.appendChild(block1);
+    document.body.appendChild(block2);
+    document.body.appendChild(block3);
+    document.body.appendChild(block4);
+  }
+
+  // 初始化颜色块
+  addColorBlocks();</script><tw-tag name="1" color="orange"></tw-tag><tw-passagedata pid="1" name="封面" tags="" position="50,25" size="100,100">&lt;img src=&quot;img/封面.jpg&quot;   alt=“封面” width=50%&gt;
 [[开始游戏|Start]]</tw-passagedata><tw-passagedata pid="2" name="FirstMeet_1" tags="" position="275,150" size="100,100">&lt;&lt;set $affection += 0&gt;&gt;
 玛恩纳向你客气问好，尚且年轻的他做起这样的事十分生疏。
 
@@ -807,7 +1013,7 @@ END1：回归平淡</tw-passagedata><tw-passagedata pid="35" name="约玛恩纳�
 “价格波动有时候并不是坏事...”
 
 [[立刻做好拒批文件]]
-[[坚持自己的想法]]</tw-passagedata><tw-passagedata pid="40" name="不加入商业联合会" tags="" position="375,300" size="100,100">你不想去商业联合会，那里太复杂了，你对这种复杂的事情始终是看不懂的。
+[[坚持自己的想法]]</tw-passagedata><tw-passagedata pid="40" name="不加入商业联合会" tags="1" position="375,300" size="100,100">你不想去商业联合会，那里太复杂了，你对这种复杂的事情始终是看不懂的。
 
 家族似乎彻底对你失望了，他们将玛恩纳调离了你的部门，很快又将你调去了维多利亚的办公室。
 
